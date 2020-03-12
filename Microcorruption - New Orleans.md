@@ -14,7 +14,14 @@ We can also see that in the register "R15", it contains the memory address for t
 ![Screenshot from 2020-03-12 11-30-11.png]({{site.baseurl}}/Screenshot from 2020-03-12 11-30-11.png)
 ![Screenshot from 2020-03-12 11-30-20.png]({{site.baseurl}}/Screenshot from 2020-03-12 11-30-20.png)
 
-Stepping through the function, we move the memory address from R15 to R13 and we keep stepping until we come across a very interesting instruction 
-> cmp.b	@r13, 0x2400(r14)
+Stepping through the function, we move the memory address from r15 to r13 and we keep stepping until we come across a very interesting instruction 
 
-This instruction compares the first byte (hence the name cmp.b) between the value stored in r13 and 
+		cmp.b	@r13, 0x2400(r14)
+
+This instruction compares the first byte (hence the name cmp.b) between the value stored in r13 and the value of r14 + the offset of 0x2400. Because the memory address in r14 is 0x0000, the value of it will be 0x2400.
+
+We run the command:
+
+		r 2400
+
+to see what is inside the memory address of 0x2400
