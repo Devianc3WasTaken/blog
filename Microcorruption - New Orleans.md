@@ -24,4 +24,9 @@ We run the command:
 
 		r 2400
 
-to see what is inside the memory address of 0x2400
+to see what is inside the memory address of 0x2400 and we get this VERY interesting data from the memory:
+![Screenshot from 2020-03-12 11-39-51.png]({{site.baseurl}}/Screenshot from 2020-03-12 11-39-51.png)
+
+And the cmp.b is comparing the first byte which is 6c (in hex) or in ASCII, is "l".
+
+Which means this instruction is checking whether the first character of the password we inputted is the character "l".
