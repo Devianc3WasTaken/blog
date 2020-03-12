@@ -30,3 +30,13 @@ to see what is inside the memory address of 0x2400 and we get this VERY interest
 And the cmp.b is comparing the first byte which is 6c (in hex) or in ASCII, is "l".
 
 Which means this instruction is checking whether the first character of the password we inputted is the character "l".
+
+The next couple instructions are just extra checks based on the password that we have given but let's go back to the memory address 0x2400. This is probably the password that was stored in the memory which the program compares to your password and if it is the same then it will (obviously) let us in.
+
+So lets try that. The value stored in the memory address 0x2400 is "l?0+r+w" in ASCII or "6c3f 302b 722b 77" in hex.
+
+The program allows us to send inputs in hex so send the input as the hex code (or ASCII, it doesn't matter) and see if the program lets us in.
+
+![Screenshot from 2020-03-12 11-49-19.png]({{site.baseurl}}/Screenshot from 2020-03-12 11-49-19.png)
+
+And now we have solved and unlocked the lock, so we can type in "solve", enter this password and unlock and finish the level.
