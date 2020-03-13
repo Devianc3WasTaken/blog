@@ -13,8 +13,8 @@ We can see a function called "check_password" which seems the most interesting o
 To get to that function, let's just enter a bogus password. I have entered "password" as my password to get to that function:![Screenshot from 2020-03-12 11-29-21.png]({{site.baseurl}}/Screenshot from 2020-03-12 11-29-21.png)
 
 We can also see that in the register "R15", it contains the memory address for the password that I have entered
-![Screenshot from 2020-03-12 11-30-11.png]({{site.baseurl}}/Screenshot from 2020-03-12 11-30-11.png)
-![Screenshot from 2020-03-12 11-30-20.png]({{site.baseurl}}/Screenshot from 2020-03-12 11-30-20.png)
+![Screenshot from 2020-03-12 11-30-11.png]({{site.baseurl}}/new_orleans/Screenshot from 2020-03-12 11-30-11.png)
+![Screenshot from 2020-03-12 11-30-20.png]({{site.baseurl}}/new_orleans/Screenshot from 2020-03-12 11-30-20.png)
 
 Stepping through the function, we move the memory address from r15 to r13 and we keep stepping until we come across a very interesting instruction 
 
@@ -27,7 +27,7 @@ We run the command:
 		r 2400
 
 to see what is inside the memory address of 0x2400 and we get this VERY interesting data from the memory:
-![Screenshot from 2020-03-12 11-39-51.png]({{site.baseurl}}/Screenshot from 2020-03-12 11-39-51.png)
+![Screenshot from 2020-03-12 11-39-51.png]({{site.baseurl}}/new_orleans/Screenshot from 2020-03-12 11-39-51.png)
 
 And the cmp.b is comparing the first byte which is 6c (in hex) or in ASCII, is "l".
 
@@ -39,6 +39,6 @@ So lets try that. The value stored in the memory address 0x2400 is "l?0+r+w" in 
 
 The program allows us to send inputs in hex so send the input as the hex code (or ASCII, it doesn't matter) and see if the program lets us in.
 
-![Screenshot from 2020-03-12 11-49-19.png]({{site.baseurl}}/Screenshot from 2020-03-12 11-49-19.png)
+![Screenshot from 2020-03-12 11-49-19.png]({{site.baseurl}}/new_orleans/Screenshot from 2020-03-12 11-49-19.png)
 
 And now we have solved and unlocked the lock, so we can type in "solve", enter this password and unlock and finish the level.
