@@ -1,6 +1,6 @@
 **[Home](https://devianc3wastaken.github.io/blog/)**
 
-## Microorruption Level - New Orleans
+## Microcorruption Level - New Orleans
 
 The first level on the Microcorruption CTF is the New Orleans level.
 
